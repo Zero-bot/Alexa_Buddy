@@ -1,0 +1,13 @@
+[Unit]
+Description=piweb
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/projects/wemo_Emulation/fauxmo/bin/python /home/pi/projects/wemo_Emulation/fauxmo/flask/api/start.py
+Restart=on-failure
+User=pi
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=Fauxmo
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/projects/wemo_Emulation/fauxmo/bin/fauxmo -c /home/pi/projects/wemo_Emulation/fauxmo/flask/api/config.json -v
+Restart=on-failure
+User=pi
+
+[Install]
+WantedBy=multi-user.target
