@@ -1,0 +1,61 @@
+{
+    "FAUXMO": {
+        "ip_address": "auto"
+    },
+    "PLUGINS": {
+        "SimpleHTTPPlugin": {
+            "DEVICES": [
+                {
+                    "port": 12340,
+                    "on_cmd": "http://192.168.0.103:5000/pi?device=tv&operation=on",
+                    "off_cmd": "http://192.168.0.103:5000/pi?device=tv&operation=off",
+                    "state_cmd": "http://192.168.0.103:5000/pi?device=tv&operation=status",
+                    "state_response_on": "on",
+                    "state_response_off": "off",
+                    "method": "GET",
+                    "name": "TV"
+                },
+                {
+                    "port": 12341,
+                    "on_cmd": "http://192.168.0.103:5000/pi?device=charger&operation=on",
+                    "off_cmd": "http://192.168.0.103:5000/pi?device=charger&operation=off",
+                    "state_cmd": "http://192.168.0.103:5000/pi?device=charger&operation=status",
+                    "state_response_on": "on",
+                    "state_response_off": "off",
+                    "method": "GET",
+                    "name": "Charger"
+                },
+                {
+                    "port": 12342,
+                    "on_cmd": "http://192.168.0.103:5000/pi?device=dth&operation=on",
+                    "off_cmd": "http://192.168.0.103:5000/pi?device=dth&operation=off",
+                    "state_cmd": "http://192.168.0.103:5000/pi?device=dth&operation=status",
+                    "state_response_on": "on",
+                    "state_response_off": "off",
+                    "method": "GET",
+                    "name": "DTH"
+                },
+                {
+                    "port": 12343,
+                    "on_cmd": "http://192.168.0.103:5000/pi?device=fan&operation=on",
+                    "off_cmd": "http://192.168.0.103:5000/pi?device=fan&operation=off",
+                    "state_cmd": "http://192.168.0.103:5000/pi?device=fan&operation=status",
+                    "state_response_on": "on",
+                    "state_response_off": "off",
+                    "method": "GET",
+                    "name": "Fan"
+                },
+                {
+                    "port": 12344,
+                    "on_cmd": "http://192.168.0.103:5000/pi?device=all&operation=on",
+                    "off_cmd": "http://192.168.0.103:5000/pi?device=all&operation=off",
+                    "state_cmd": "http://192.168.0.103:5000/pi?device=all&operation=status",
+                    "state_response_on": "on",
+                    "state_response_off": "off",
+                    "method": "GET",
+                    "name": "All Devices"
+                }
+            ]
+        }
+    }
+}

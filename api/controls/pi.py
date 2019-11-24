@@ -5,7 +5,7 @@ from time import sleep
 class Devices(Enum):
 	TV = 7
 	DTH = 11
-	FIRESTICK = 13
+	CHARGER = 13
 	FAN = 15
 
 class State(Enum):
