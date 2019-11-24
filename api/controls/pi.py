@@ -45,11 +45,13 @@ class Pi(object):
 			for device in Devices:
 				if self._DEVICES_STATE[device] is not State.ON:
 					GPIO.output(device.value, GPIO.LOW)
+					self._DEVICES_STATE[device] = State.ON
 			self._DEVICES_STATE['ALL'] = state
 		elif state is State.OFF:
 			for device in Devices:
 				if self._DEVICES_STATE[device] is not State.OFF:
 					GPIO.output(device.value, GPIO.HIGH)
+					self._DEVICES_STATE[device] = State.OFF
 			self._DEVICES_STATE['ALL'] = state
 		return state.value
 
